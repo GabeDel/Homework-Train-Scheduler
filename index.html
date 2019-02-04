@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedules</title>
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   
+
+
+</head>
+<body>
+        <!-- Jumbotron Starts here -->
+        <div class="container">
+                <div class="jumbotron" >
+                    <h1 class="text-center">Anytime is Train Time</h1>
+                    <h3 class="text-center">Choo Choo. Chee Chee.
+                    </h3>
+                    
+                </div>
+                    
+            <!-- Train table where all of our train data is displayed-->
+            <div class="container">
+                <h2>Current Train Schedule</h2>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <!-- Table content -->
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                            
+                        </tr>
+                        </thead>
+                    <tbody id ="all-display">
+                    </tbody>
+                    </table>
+                </div>
+            <!-- This is the form where information about a new train can be added and submitted -->
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Add Train</h3>
+                        <form id="newTrainForm">
+                            <div class="form-group">
+                                <label for="Train Name">Train Name</label>
+                                <input class="form-control" id="trainName" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="Destination">Destination</label>
+                                <input class="form-control" id="destination" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="Frequency">Frequency (HH:mm)</label>
+                                <input class="form-control" id="frequency" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="nextArrival">Next Arrival</label>
+                                <input class="form-control" id="Arrival" type="number">
+                            </div>
+                            <div class="form-group">
+                                    <label for="minutesAway">Minutes Away</label>
+                                    <input class="form-control" id="minutesAway" type="number">
+                                </div>
+                                
+                            <div class="form-group form-check">
+                            </div>
+                            <!-- Submit</button> -->
+                            <input class="btn button-primary" id="addTrain" type="submit"> 
+                            
+                        </form>
+            </div>
+        
+        
+        
+          <!-- jQuery -->
+          <script src="https://code.jquery.com/jquery.js"></script>
+        
+         <!-- Firebase link -->
+          <script
+          src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+          <script src="index.js"></script>
+        
+        
+        
+                
+    
+</body>
+</html>
